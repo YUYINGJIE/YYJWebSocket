@@ -1,0 +1,601 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C55431652186FC97004C1BFE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C55431642186FC97004C1BFE /* AppDelegate.m */; };
+		C55431682186FC97004C1BFE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C55431672186FC97004C1BFE /* ViewController.m */; };
+		C554316B2186FC97004C1BFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C55431692186FC97004C1BFE /* Main.storyboard */; };
+		C554316E2186FC97004C1BFE /* YYJWebSocket.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C554316C2186FC97004C1BFE /* YYJWebSocket.xcdatamodeld */; };
+		C55431702186FC98004C1BFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C554316F2186FC98004C1BFE /* Assets.xcassets */; };
+		C55431732186FC98004C1BFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C55431712186FC98004C1BFE /* LaunchScreen.storyboard */; };
+		C55431762186FC98004C1BFE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C55431752186FC98004C1BFE /* main.m */; };
+		C55431802186FC98004C1BFE /* YYJWebSocketTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C554317F2186FC98004C1BFE /* YYJWebSocketTests.m */; };
+		C554318B2186FC98004C1BFE /* YYJWebSocketUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C554318A2186FC98004C1BFE /* YYJWebSocketUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C554317C2186FC98004C1BFE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C55431582186FC97004C1BFE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C554315F2186FC97004C1BFE;
+			remoteInfo = YYJWebSocket;
+		};
+		C55431872186FC98004C1BFE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C55431582186FC97004C1BFE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C554315F2186FC97004C1BFE;
+			remoteInfo = YYJWebSocket;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C55431602186FC97004C1BFE /* YYJWebSocket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YYJWebSocket.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C55431632186FC97004C1BFE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C55431642186FC97004C1BFE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C55431662186FC97004C1BFE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C55431672186FC97004C1BFE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C554316A2186FC97004C1BFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C554316D2186FC97004C1BFE /* YYJWebSocket.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = YYJWebSocket.xcdatamodel; sourceTree = "<group>"; };
+		C554316F2186FC98004C1BFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C55431722186FC98004C1BFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C55431742186FC98004C1BFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C55431752186FC98004C1BFE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C554317B2186FC98004C1BFE /* YYJWebSocketTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YYJWebSocketTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C554317F2186FC98004C1BFE /* YYJWebSocketTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYJWebSocketTests.m; sourceTree = "<group>"; };
+		C55431812186FC98004C1BFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C55431862186FC98004C1BFE /* YYJWebSocketUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YYJWebSocketUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C554318A2186FC98004C1BFE /* YYJWebSocketUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYJWebSocketUITests.m; sourceTree = "<group>"; };
+		C554318C2186FC98004C1BFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C554315D2186FC97004C1BFE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C55431782186FC98004C1BFE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C55431832186FC98004C1BFE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C55431572186FC97004C1BFE = {
+			isa = PBXGroup;
+			children = (
+				C55431622186FC97004C1BFE /* YYJWebSocket */,
+				C554317E2186FC98004C1BFE /* YYJWebSocketTests */,
+				C55431892186FC98004C1BFE /* YYJWebSocketUITests */,
+				C55431612186FC97004C1BFE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C55431612186FC97004C1BFE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C55431602186FC97004C1BFE /* YYJWebSocket.app */,
+				C554317B2186FC98004C1BFE /* YYJWebSocketTests.xctest */,
+				C55431862186FC98004C1BFE /* YYJWebSocketUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C55431622186FC97004C1BFE /* YYJWebSocket */ = {
+			isa = PBXGroup;
+			children = (
+				C55431632186FC97004C1BFE /* AppDelegate.h */,
+				C55431642186FC97004C1BFE /* AppDelegate.m */,
+				C55431662186FC97004C1BFE /* ViewController.h */,
+				C55431672186FC97004C1BFE /* ViewController.m */,
+				C55431692186FC97004C1BFE /* Main.storyboard */,
+				C554316F2186FC98004C1BFE /* Assets.xcassets */,
+				C55431712186FC98004C1BFE /* LaunchScreen.storyboard */,
+				C55431742186FC98004C1BFE /* Info.plist */,
+				C55431752186FC98004C1BFE /* main.m */,
+				C554316C2186FC97004C1BFE /* YYJWebSocket.xcdatamodeld */,
+			);
+			path = YYJWebSocket;
+			sourceTree = "<group>";
+		};
+		C554317E2186FC98004C1BFE /* YYJWebSocketTests */ = {
+			isa = PBXGroup;
+			children = (
+				C554317F2186FC98004C1BFE /* YYJWebSocketTests.m */,
+				C55431812186FC98004C1BFE /* Info.plist */,
+			);
+			path = YYJWebSocketTests;
+			sourceTree = "<group>";
+		};
+		C55431892186FC98004C1BFE /* YYJWebSocketUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C554318A2186FC98004C1BFE /* YYJWebSocketUITests.m */,
+				C554318C2186FC98004C1BFE /* Info.plist */,
+			);
+			path = YYJWebSocketUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C554315F2186FC97004C1BFE /* YYJWebSocket */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C554318F2186FC98004C1BFE /* Build configuration list for PBXNativeTarget "YYJWebSocket" */;
+			buildPhases = (
+				C554315C2186FC97004C1BFE /* Sources */,
+				C554315D2186FC97004C1BFE /* Frameworks */,
+				C554315E2186FC97004C1BFE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YYJWebSocket;
+			productName = YYJWebSocket;
+			productReference = C55431602186FC97004C1BFE /* YYJWebSocket.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C554317A2186FC98004C1BFE /* YYJWebSocketTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C55431922186FC98004C1BFE /* Build configuration list for PBXNativeTarget "YYJWebSocketTests" */;
+			buildPhases = (
+				C55431772186FC98004C1BFE /* Sources */,
+				C55431782186FC98004C1BFE /* Frameworks */,
+				C55431792186FC98004C1BFE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C554317D2186FC98004C1BFE /* PBXTargetDependency */,
+			);
+			name = YYJWebSocketTests;
+			productName = YYJWebSocketTests;
+			productReference = C554317B2186FC98004C1BFE /* YYJWebSocketTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C55431852186FC98004C1BFE /* YYJWebSocketUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C55431952186FC98004C1BFE /* Build configuration list for PBXNativeTarget "YYJWebSocketUITests" */;
+			buildPhases = (
+				C55431822186FC98004C1BFE /* Sources */,
+				C55431832186FC98004C1BFE /* Frameworks */,
+				C55431842186FC98004C1BFE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C55431882186FC98004C1BFE /* PBXTargetDependency */,
+			);
+			name = YYJWebSocketUITests;
+			productName = YYJWebSocketUITests;
+			productReference = C55431862186FC98004C1BFE /* YYJWebSocketUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C55431582186FC97004C1BFE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = HuaHan;
+				TargetAttributes = {
+					C554315F2186FC97004C1BFE = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					C554317A2186FC98004C1BFE = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = C554315F2186FC97004C1BFE;
+					};
+					C55431852186FC98004C1BFE = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = C554315F2186FC97004C1BFE;
+					};
+				};
+			};
+			buildConfigurationList = C554315B2186FC97004C1BFE /* Build configuration list for PBXProject "YYJWebSocket" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C55431572186FC97004C1BFE;
+			productRefGroup = C55431612186FC97004C1BFE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C554315F2186FC97004C1BFE /* YYJWebSocket */,
+				C554317A2186FC98004C1BFE /* YYJWebSocketTests */,
+				C55431852186FC98004C1BFE /* YYJWebSocketUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C554315E2186FC97004C1BFE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C55431732186FC98004C1BFE /* LaunchScreen.storyboard in Resources */,
+				C55431702186FC98004C1BFE /* Assets.xcassets in Resources */,
+				C554316B2186FC97004C1BFE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C55431792186FC98004C1BFE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C55431842186FC98004C1BFE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C554315C2186FC97004C1BFE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C554316E2186FC97004C1BFE /* YYJWebSocket.xcdatamodeld in Sources */,
+				C55431682186FC97004C1BFE /* ViewController.m in Sources */,
+				C55431762186FC98004C1BFE /* main.m in Sources */,
+				C55431652186FC97004C1BFE /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C55431772186FC98004C1BFE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C55431802186FC98004C1BFE /* YYJWebSocketTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C55431822186FC98004C1BFE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C554318B2186FC98004C1BFE /* YYJWebSocketUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C554317D2186FC98004C1BFE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C554315F2186FC97004C1BFE /* YYJWebSocket */;
+			targetProxy = C554317C2186FC98004C1BFE /* PBXContainerItemProxy */;
+		};
+		C55431882186FC98004C1BFE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C554315F2186FC97004C1BFE /* YYJWebSocket */;
+			targetProxy = C55431872186FC98004C1BFE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C55431692186FC97004C1BFE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C554316A2186FC97004C1BFE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C55431712186FC98004C1BFE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C55431722186FC98004C1BFE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C554318D2186FC98004C1BFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C554318E2186FC98004C1BFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C55431902186FC98004C1BFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7P5G4DWE6L;
+				INFOPLIST_FILE = YYJWebSocket/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.HuaHan.YYJWebSocket;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C55431912186FC98004C1BFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7P5G4DWE6L;
+				INFOPLIST_FILE = YYJWebSocket/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.HuaHan.YYJWebSocket;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C55431932186FC98004C1BFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7P5G4DWE6L;
+				INFOPLIST_FILE = YYJWebSocketTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.HuaHan.YYJWebSocketTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YYJWebSocket.app/YYJWebSocket";
+			};
+			name = Debug;
+		};
+		C55431942186FC98004C1BFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7P5G4DWE6L;
+				INFOPLIST_FILE = YYJWebSocketTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.HuaHan.YYJWebSocketTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YYJWebSocket.app/YYJWebSocket";
+			};
+			name = Release;
+		};
+		C55431962186FC98004C1BFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7P5G4DWE6L;
+				INFOPLIST_FILE = YYJWebSocketUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.HuaHan.YYJWebSocketUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = YYJWebSocket;
+			};
+			name = Debug;
+		};
+		C55431972186FC98004C1BFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7P5G4DWE6L;
+				INFOPLIST_FILE = YYJWebSocketUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.HuaHan.YYJWebSocketUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = YYJWebSocket;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C554315B2186FC97004C1BFE /* Build configuration list for PBXProject "YYJWebSocket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C554318D2186FC98004C1BFE /* Debug */,
+				C554318E2186FC98004C1BFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C554318F2186FC98004C1BFE /* Build configuration list for PBXNativeTarget "YYJWebSocket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C55431902186FC98004C1BFE /* Debug */,
+				C55431912186FC98004C1BFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C55431922186FC98004C1BFE /* Build configuration list for PBXNativeTarget "YYJWebSocketTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C55431932186FC98004C1BFE /* Debug */,
+				C55431942186FC98004C1BFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C55431952186FC98004C1BFE /* Build configuration list for PBXNativeTarget "YYJWebSocketUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C55431962186FC98004C1BFE /* Debug */,
+				C55431972186FC98004C1BFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C554316C2186FC97004C1BFE /* YYJWebSocket.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C554316D2186FC97004C1BFE /* YYJWebSocket.xcdatamodel */,
+			);
+			currentVersion = C554316D2186FC97004C1BFE /* YYJWebSocket.xcdatamodel */;
+			path = YYJWebSocket.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = C55431582186FC97004C1BFE /* Project object */;
+}
