@@ -14,70 +14,70 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  socket状态
  */
-typedef NS_ENUM(NSInteger,HZSocketStatus){
-    HZSocketStatusConnected,// 已连接
-    HZSocketStatusFailed,// 失败
-    HZSocketStatusClosedByServer,// 系统关闭
-    HZSocketStatusClosedByUser,// 用户关闭
-    HZSocketStatusReceived// 接收消息
+typedef NS_ENUM(NSInteger,YYJSocketStatus){
+    YYJSocketStatusConnected,// 已连接
+    YYJSocketStatusFailed,// 失败
+    YYJSocketStatusClosedByServer,// 系统关闭
+    YYJSocketStatusClosedByUser,// 用户关闭
+    YYJSocketStatusReceived// 接收消息
 };
 /**
  *
  *  消息类型
  */
-typedef NS_ENUM(NSInteger,HZSocketReceiveType){
-    HZSocketReceiveTypeForMessage,
-    HZSocketReceiveTypeForPong
+typedef NS_ENUM(NSInteger,YYJSocketReceiveType){
+    YYJSocketReceiveTypeForMessage,
+    YYJSocketReceiveTypeForPong
 };
 
 /**
  *
  *  连接成功回调
  */
-typedef void(^HZSocketDidConnectBlock)();
+typedef void(^YYJSocketDidConnectBlock)();
 /**
  *  @author 孔凡列
  *
  *  失败回调
  */
-typedef void(^HZSocketDidFailBlock)(NSError *error);
+typedef void(^YYJSocketDidFailBlock)(NSError *error);
 /**
  *
  *  关闭回调
  */
-typedef void(^HZSocketDidCloseBlock)(NSInteger code,NSString *reason,BOOL wasClean);
+typedef void(^YYJSocketDidCloseBlock)(NSInteger code,NSString *reason,BOOL wasClean);
 /**
  *
  *  消息接收回调
  */
-typedef void(^HZSocketDidReceiveBlock)(id message ,HZSocketReceiveType type);
+typedef void(^YYJSocketDidReceiveBlock)(id message ,YYJSocketReceiveType type);
 
 @interface YYJSocketManager : NSObject
 /**
  *
  *  连接回调
  */
-@property (nonatomic,copy)HZSocketDidConnectBlock connect;
+@property (nonatomic,copy)YYJSocketDidConnectBlock connect;
 /**
  *
  *  接收消息回调
  */
-@property (nonatomic,copy)HZSocketDidReceiveBlock receive;
+@property (nonatomic,copy)YYJSocketDidReceiveBlock receive;
 /**
  *
  *  失败回调
  */
-@property (nonatomic,copy)HZSocketDidFailBlock failure;
+@property (nonatomic,copy)YYJSocketDidFailBlock failure;
 /**
  *
  *  关闭回调
  */
-@property (nonatomic,copy)HZSocketDidCloseBlock close;
+@property (nonatomic,copy)YYJSocketDidCloseBlock close;
 /**
  *
  *  当前的socket状态
  */
-@property (nonatomic,assign,readonly)HZSocketStatus HZ_socketStatus;
+@property (nonatomic,assign,readonly)YYJSocketStatus YYJ_socketStatus;
 /**
  *
  *  超时重连时间，默认1秒
@@ -103,21 +103,21 @@ typedef void(^HZSocketDidReceiveBlock)(id message ,HZSocketReceiveType type);
  *  @param receive 接收消息回调
  *  @param failure 失败回调
  */
-- (void)HZ_open:(NSString *)urlStr connect:(HZSocketDidConnectBlock)connect receive:(HZSocketDidReceiveBlock)receive failure:(HZSocketDidFailBlock)failure;
+- (void)YYJ_open:(NSString *)urlStr connect:(YYJSocketDidConnectBlock)connect receive:(YYJSocketDidReceiveBlock)receive failure:(YYJSocketDidFailBlock)failure;
 /**
  *
  *  关闭socket
  *
  *  @param close 关闭回调
  */
-- (void)HZ_close:(HZSocketDidCloseBlock)close;
+- (void)YYJ_close:(YYJSocketDidCloseBlock)close;
 /**
  *
  *  发送消息，NSString 或者 NSData
  *
  *  @param data Send a UTF8 String or Data.
  */
-- (void)HZ_send:(id)data;
+- (void)YYJ_send:(id)data;
 -(void)loginwithUserhosid:(NSString*)hosid userid:(NSString*)userid;
 -(void)stopTimer2;
 

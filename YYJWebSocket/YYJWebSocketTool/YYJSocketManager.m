@@ -16,7 +16,7 @@
 
 @interface YYJSocketManager ()<SRWebSocketDelegate>
 @property (nonatomic,strong)SRWebSocket *webSocket;
-@property (nonatomic,assign)HZSocketStatus HZ_socketStatus;
+@property (nonatomic,assign)YYJSocketStatus YYJ_socketStatus;
 @property (nonatomic,weak)NSTimer *timer;
 @property (nonatomic,copy)NSString *urlString;
 @property(nonatomic,strong) dispatch_source_t timer2;
@@ -65,11 +65,11 @@
     
     NSString *url = [NSString stringWithFormat:@"web服务地址"];
     
-    [self HZ_open:url connect:^{
+    [self YYJ_open:url connect:^{
         NSLog(@"成功连接");
         
-    } receive:^(id message, HZSocketReceiveType type) {
-        if (type == HZSocketReceiveTypeForMessage) {
+    } receive:^(id message, YYJSocketReceiveType type) {
+        if (type == YYJSocketReceiveTypeForMessage) {
             NSLog(@"接收 类型1--%@",message);
             if ([message isEqualToString:@"PONG"]) {
             }
@@ -86,7 +86,7 @@
                 }
             }
         }
-        else if (type == HZSocketReceiveTypeForPong){
+        else if (type == YYJSocketReceiveTypeForPong){
             NSLog(@"接收 类型2--%@",message);
         }
     } failure:^(NSError *error) {
@@ -95,56 +95,56 @@
     
 }
 
-- (void)HZ_open:(NSString *)urlStr connect:(HZSocketDidConnectBlock)connect receive:(HZSocketDidReceiveBlock)receive failure:(HZSocketDidFailBlock)failure{
+- (void)YYJ_open:(NSString *)urlStr connect:(YYJSocketDidConnectBlock)connect receive:(YYJSocketDidReceiveBlock)receive failure:(YYJSocketDidFailBlock)failure{
     [YYJSocketManager shareManager].connect = connect;
     [YYJSocketManager shareManager].receive = receive;
     [YYJSocketManager shareManager].failure = failure;
-    [self HZ_open:urlStr];
+    [self YYJ_open:urlStr];
 }
 
-- (void)HZ_close:(HZSocketDidCloseBlock)close{
+- (void)YYJ_close:(YYJSocketDidCloseBlock)close{
     [YYJSocketManager shareManager].close = close;
-    [self HZ_close];
+    [self YYJ_close];
 }
 
 // Send a UTF8 String or Data.
-- (void)HZ_send:(id)data{
-    switch ([YYJSocketManager shareManager].HZ_socketStatus) {
-        case HZSocketStatusConnected:
-        case HZSocketStatusReceived:{
+- (void)YYJ_send:(id)data{
+    switch ([YYJSocketManager shareManager].YYJ_socketStatus) {
+        case YYJSocketStatusConnected:
+        case YYJSocketStatusReceived:{
             NSLog(@"发送中。。。");
             [self.webSocket send:data];
             break;
         }
-        case HZSocketStatusFailed:
+        case YYJSocketStatusFailed:
             NSLog(@"发送失败");
             if (_rereceveCounter == 5) {
                 _reconnectCounter=0;
                 [self stopTimer2];
-                [self HZ_reconnect];
+                [self YYJ_reconnect];
             }
             else{
                 _rereceveCounter ++;
             }
             break;
-        case HZSocketStatusClosedByServer:
+        case YYJSocketStatusClosedByServer:
             NSLog(@"已经关闭");
             if (_rereceveCounter == 5) {
                 _reconnectCounter=0;
                 [self stopTimer2];
-                [self HZ_reconnect];
+                [self YYJ_reconnect];
             }
             else{
                 _rereceveCounter ++;
             }
             
             break;
-        case HZSocketStatusClosedByUser:
+        case YYJSocketStatusClosedByUser:
             NSLog(@"已经关闭");
             if (_rereceveCounter == 5) {
                 _reconnectCounter=0;
                 [self stopTimer2];
-                [self HZ_reconnect];
+                [self YYJ_reconnect];
             }
             else{
                 _rereceveCounter ++;
@@ -155,7 +155,7 @@
 }
 
 #pragma mark -- private method
-- (void)HZ_open:(id)params{
+- (void)YYJ_open:(id)params{
     //    NSLog(@"params = %@",params);
     NSString *urlStr = nil;
     if ([params isKindOfClass:[NSString class]]) {
@@ -175,7 +175,7 @@
     [self.webSocket open];
 }
 
-- (void)HZ_close{
+- (void)YYJ_close{
     
     [self.webSocket close];
     self.webSocket = nil;
@@ -185,12 +185,12 @@
     
 }
 
-- (void)HZ_reconnect{
+- (void)YYJ_reconnect{
     // 计数+1
     if (_reconnectCounter < self.reconnectCount - 1) {
         _reconnectCounter ++;
         // 开启定时器
-        NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:self.overtime target:self selector:@selector(HZ_open:) userInfo:self.urlString repeats:NO];
+        NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:self.overtime target:self selector:@selector(YYJ_open:) userInfo:self.urlString repeats:NO];
         [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
         self.timer = timer;
     }
@@ -211,7 +211,7 @@
     NSLog(@"Websocket Connected");
     
     [YYJSocketManager shareManager].connect ? [YYJSocketManager shareManager].connect() : nil;
-    [YYJSocketManager shareManager].HZ_socketStatus = HZSocketStatusConnected;
+    [YYJSocketManager shareManager].YYJ_socketStatus = YYJSocketStatusConnected;
     // 开启成功后重置重连计数器
     _reconnectCounter = 0;
     [self startGCDTimer];
@@ -220,17 +220,17 @@
 
 - (void)webSocket:(SRWebSocket *)webSocket didFailWithError:(NSError *)error{
     NSLog(@":( Websocket Failed With Error %@", error);
-    [YYJSocketManager shareManager].HZ_socketStatus = HZSocketStatusFailed;
+    [YYJSocketManager shareManager].YYJ_socketStatus = YYJSocketStatusFailed;
     [YYJSocketManager shareManager].failure ? [YYJSocketManager shareManager].failure(error) : nil;
     // 重连
-    [self HZ_reconnect];
+    [self YYJ_reconnect];
     [self stopTimer2];
 }
 
 - (void)webSocket:(SRWebSocket *)webSocket didReceiveMessage:(id)message{
     //  NSLog(@":( Websocket Receive With message %@", message);
-    [YYJSocketManager shareManager].HZ_socketStatus = HZSocketStatusReceived;
-    [YYJSocketManager shareManager].receive ? [YYJSocketManager shareManager].receive(message,HZSocketReceiveTypeForMessage) : nil;
+    [YYJSocketManager shareManager].YYJ_socketStatus = YYJSocketStatusReceived;
+    [YYJSocketManager shareManager].receive ? [YYJSocketManager shareManager].receive(message,YYJSocketReceiveTypeForMessage) : nil;
     _rereceveCounter=0;
     
     
@@ -247,7 +247,7 @@
         
         //在这里执行事件
         NSString*jsonstr=[self.Dictionary mj_JSONString];
-        [self HZ_send:jsonstr];
+        [self YYJ_send:jsonstr];
     });
     dispatch_resume(_timer2);
 }
@@ -274,19 +274,19 @@
 - (void)webSocket:(SRWebSocket *)webSocket didCloseWithCode:(NSInteger)code reason:(NSString *)reason wasClean:(BOOL)wasClean{
     NSLog(@"Closed Reason:%@  code = %zd",reason,code);
     if (reason) {
-        [YYJSocketManager shareManager].HZ_socketStatus = HZSocketStatusClosedByServer;
+        [YYJSocketManager shareManager].YYJ_socketStatus = YYJSocketStatusClosedByServer;
         // 重连
-        [self HZ_reconnect];
+        [self YYJ_reconnect];
     }
     else{
-        [YYJSocketManager shareManager].HZ_socketStatus = HZSocketStatusClosedByUser;
+        [YYJSocketManager shareManager].YYJ_socketStatus = YYJSocketStatusClosedByUser;
     }
     [YYJSocketManager shareManager].close ? [YYJSocketManager shareManager].close(code,reason,wasClean) : nil;
     self.webSocket = nil;
 }
 
 - (void)webSocket:(SRWebSocket *)webSocket didReceivePong:(NSData *)pongPayload{
-    [YYJSocketManager shareManager].receive ? [YYJSocketManager shareManager].receive(pongPayload,HZSocketReceiveTypeForPong) : nil;
+    [YYJSocketManager shareManager].receive ? [YYJSocketManager shareManager].receive(pongPayload,YYJSocketReceiveTypeForPong) : nil;
 }
 -(void)stopTimer2{
     if(_timer2){
@@ -296,7 +296,7 @@
 }
 - (void)dealloc{
     // Close WebSocket
-    [self HZ_close];
+    [self YYJ_close];
 }
 
 
