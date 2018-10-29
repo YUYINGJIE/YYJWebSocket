@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3DEBAB9522021BF429966921 /* libPods-YYJWebSocketTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F2A9D469A70F6CCC09903A4 /* libPods-YYJWebSocketTests.a */; };
+		49CF6BA92DAB9AA09B92FC42 /* libPods-YYJWebSocketUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4423E5632A1051E9EB9A6F37 /* libPods-YYJWebSocketUITests.a */; };
+		5D3A1055B23EAE292212C451 /* libPods-YYJWebSocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E11B1FD744C54279AF94ED /* libPods-YYJWebSocket.a */; };
 		C55431652186FC97004C1BFE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C55431642186FC97004C1BFE /* AppDelegate.m */; };
 		C55431682186FC97004C1BFE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C55431672186FC97004C1BFE /* ViewController.m */; };
 		C554316B2186FC97004C1BFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C55431692186FC97004C1BFE /* Main.storyboard */; };
@@ -16,6 +19,8 @@
 		C55431762186FC98004C1BFE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C55431752186FC98004C1BFE /* main.m */; };
 		C55431802186FC98004C1BFE /* YYJWebSocketTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C554317F2186FC98004C1BFE /* YYJWebSocketTests.m */; };
 		C554318B2186FC98004C1BFE /* YYJWebSocketUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C554318A2186FC98004C1BFE /* YYJWebSocketUITests.m */; };
+		C554319B2186FE9B004C1BFE /* YYJSocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C554319A2186FE9B004C1BFE /* YYJSocketManager.m */; };
+		C554319E21870271004C1BFE /* HZWebSocketMessgeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C554319D21870271004C1BFE /* HZWebSocketMessgeModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +41,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0025D6976E17933E0D353BD4 /* Pods-YYJWebSocketTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYJWebSocketTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YYJWebSocketTests/Pods-YYJWebSocketTests.release.xcconfig"; sourceTree = "<group>"; };
+		0036B556C52A383F58A53092 /* Pods-YYJWebSocket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYJWebSocket.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YYJWebSocket/Pods-YYJWebSocket.debug.xcconfig"; sourceTree = "<group>"; };
+		06E11B1FD744C54279AF94ED /* libPods-YYJWebSocket.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YYJWebSocket.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2484AA03182FCC93534F5820 /* Pods-YYJWebSocket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYJWebSocket.release.xcconfig"; path = "Pods/Target Support Files/Pods-YYJWebSocket/Pods-YYJWebSocket.release.xcconfig"; sourceTree = "<group>"; };
+		4423E5632A1051E9EB9A6F37 /* libPods-YYJWebSocketUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YYJWebSocketUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F2A9D469A70F6CCC09903A4 /* libPods-YYJWebSocketTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YYJWebSocketTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		633F13C9807C8F019A5C7BC7 /* Pods-YYJWebSocketUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYJWebSocketUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YYJWebSocketUITests/Pods-YYJWebSocketUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C55431602186FC97004C1BFE /* YYJWebSocket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YYJWebSocket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C55431632186FC97004C1BFE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C55431642186FC97004C1BFE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -53,6 +65,12 @@
 		C55431862186FC98004C1BFE /* YYJWebSocketUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YYJWebSocketUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C554318A2186FC98004C1BFE /* YYJWebSocketUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYJWebSocketUITests.m; sourceTree = "<group>"; };
 		C554318C2186FC98004C1BFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C55431992186FE9B004C1BFE /* YYJSocketManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYJSocketManager.h; sourceTree = "<group>"; };
+		C554319A2186FE9B004C1BFE /* YYJSocketManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYJSocketManager.m; sourceTree = "<group>"; };
+		C554319C21870271004C1BFE /* HZWebSocketMessgeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZWebSocketMessgeModel.h; sourceTree = "<group>"; };
+		C554319D21870271004C1BFE /* HZWebSocketMessgeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZWebSocketMessgeModel.m; sourceTree = "<group>"; };
+		E24CDAA88B6AE2D2D89A2D4A /* Pods-YYJWebSocketUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYJWebSocketUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YYJWebSocketUITests/Pods-YYJWebSocketUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E3E45BECC9559E6536932ED1 /* Pods-YYJWebSocketTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYJWebSocketTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YYJWebSocketTests/Pods-YYJWebSocketTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D3A1055B23EAE292212C451 /* libPods-YYJWebSocket.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DEBAB9522021BF429966921 /* libPods-YYJWebSocketTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,12 +94,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49CF6BA92DAB9AA09B92FC42 /* libPods-YYJWebSocketUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F23F9CD14EF9CDE786F3B29 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				06E11B1FD744C54279AF94ED /* libPods-YYJWebSocket.a */,
+				4F2A9D469A70F6CCC09903A4 /* libPods-YYJWebSocketTests.a */,
+				4423E5632A1051E9EB9A6F37 /* libPods-YYJWebSocketUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C55431572186FC97004C1BFE = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +118,8 @@
 				C554317E2186FC98004C1BFE /* YYJWebSocketTests */,
 				C55431892186FC98004C1BFE /* YYJWebSocketUITests */,
 				C55431612186FC97004C1BFE /* Products */,
+				CD42EA39FCAB2832AD39A11A /* Pods */,
+				9F23F9CD14EF9CDE786F3B29 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +136,7 @@
 		C55431622186FC97004C1BFE /* YYJWebSocket */ = {
 			isa = PBXGroup;
 			children = (
+				C55431982186FE2F004C1BFE /* YYJWebSocketTool */,
 				C55431632186FC97004C1BFE /* AppDelegate.h */,
 				C55431642186FC97004C1BFE /* AppDelegate.m */,
 				C55431662186FC97004C1BFE /* ViewController.h */,
@@ -135,6 +169,30 @@
 			path = YYJWebSocketUITests;
 			sourceTree = "<group>";
 		};
+		C55431982186FE2F004C1BFE /* YYJWebSocketTool */ = {
+			isa = PBXGroup;
+			children = (
+				C55431992186FE9B004C1BFE /* YYJSocketManager.h */,
+				C554319A2186FE9B004C1BFE /* YYJSocketManager.m */,
+				C554319C21870271004C1BFE /* HZWebSocketMessgeModel.h */,
+				C554319D21870271004C1BFE /* HZWebSocketMessgeModel.m */,
+			);
+			path = YYJWebSocketTool;
+			sourceTree = "<group>";
+		};
+		CD42EA39FCAB2832AD39A11A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0036B556C52A383F58A53092 /* Pods-YYJWebSocket.debug.xcconfig */,
+				2484AA03182FCC93534F5820 /* Pods-YYJWebSocket.release.xcconfig */,
+				E3E45BECC9559E6536932ED1 /* Pods-YYJWebSocketTests.debug.xcconfig */,
+				0025D6976E17933E0D353BD4 /* Pods-YYJWebSocketTests.release.xcconfig */,
+				E24CDAA88B6AE2D2D89A2D4A /* Pods-YYJWebSocketUITests.debug.xcconfig */,
+				633F13C9807C8F019A5C7BC7 /* Pods-YYJWebSocketUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -142,6 +200,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C554318F2186FC98004C1BFE /* Build configuration list for PBXNativeTarget "YYJWebSocket" */;
 			buildPhases = (
+				E2DB59E8B634CCBC3E3D07C3 /* [CP] Check Pods Manifest.lock */,
 				C554315C2186FC97004C1BFE /* Sources */,
 				C554315D2186FC97004C1BFE /* Frameworks */,
 				C554315E2186FC97004C1BFE /* Resources */,
@@ -159,6 +218,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C55431922186FC98004C1BFE /* Build configuration list for PBXNativeTarget "YYJWebSocketTests" */;
 			buildPhases = (
+				736206860B2315D174684C94 /* [CP] Check Pods Manifest.lock */,
 				C55431772186FC98004C1BFE /* Sources */,
 				C55431782186FC98004C1BFE /* Frameworks */,
 				C55431792186FC98004C1BFE /* Resources */,
@@ -177,6 +237,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C55431952186FC98004C1BFE /* Build configuration list for PBXNativeTarget "YYJWebSocketUITests" */;
 			buildPhases = (
+				19A1AC31F4F61BB89F583519 /* [CP] Check Pods Manifest.lock */,
 				C55431822186FC98004C1BFE /* Sources */,
 				C55431832186FC98004C1BFE /* Frameworks */,
 				C55431842186FC98004C1BFE /* Resources */,
@@ -260,13 +321,84 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		19A1AC31F4F61BB89F583519 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YYJWebSocketUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		736206860B2315D174684C94 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YYJWebSocketTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2DB59E8B634CCBC3E3D07C3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YYJWebSocket-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C554315C2186FC97004C1BFE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				C554316E2186FC97004C1BFE /* YYJWebSocket.xcdatamodeld in Sources */,
+				C554319B2186FE9B004C1BFE /* YYJSocketManager.m in Sources */,
 				C55431682186FC97004C1BFE /* ViewController.m in Sources */,
+				C554319E21870271004C1BFE /* HZWebSocketMessgeModel.m in Sources */,
 				C55431762186FC98004C1BFE /* main.m in Sources */,
 				C55431652186FC97004C1BFE /* AppDelegate.m in Sources */,
 			);
@@ -437,6 +569,7 @@
 		};
 		C55431902186FC98004C1BFE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0036B556C52A383F58A53092 /* Pods-YYJWebSocket.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -454,6 +587,7 @@
 		};
 		C55431912186FC98004C1BFE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2484AA03182FCC93534F5820 /* Pods-YYJWebSocket.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -471,6 +605,7 @@
 		};
 		C55431932186FC98004C1BFE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3E45BECC9559E6536932ED1 /* Pods-YYJWebSocketTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -490,6 +625,7 @@
 		};
 		C55431942186FC98004C1BFE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0025D6976E17933E0D353BD4 /* Pods-YYJWebSocketTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -509,6 +645,7 @@
 		};
 		C55431962186FC98004C1BFE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E24CDAA88B6AE2D2D89A2D4A /* Pods-YYJWebSocketUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7P5G4DWE6L;
@@ -527,6 +664,7 @@
 		};
 		C55431972186FC98004C1BFE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 633F13C9807C8F019A5C7BC7 /* Pods-YYJWebSocketUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7P5G4DWE6L;
